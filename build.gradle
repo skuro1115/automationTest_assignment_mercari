@@ -1,0 +1,34 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Selenium-java 4
+    testImplementation('org.seleniumhq.selenium:selenium-java:4.32.0')
+
+    // Use JUnit Jupiter for testing.
+    testImplementation('org.junit.jupiter:junit-jupiter:5.12.2')
+    testRuntimeOnly('org.junit.platform:junit-platform-launcher')
+}
+
+compileJava {
+    options.encoding = "UTF-8"
+}
+
+compileTestJava {
+    options.encoding = "UTF-8"
+}
+
+test {
+    // Use junit platform for unit tests
+    useJUnitPlatform()
+}

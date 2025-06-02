@@ -1,63 +1,69 @@
-# hotel-example-selenium4-java-ja
-
-[![selenium4-java-ja](https://github.com/takeyaqa/hotel-example-selenium4-java-ja/actions/workflows/test.yml/badge.svg)](https://github.com/takeyaqa/hotel-example-selenium4-java-ja/actions/workflows/test.yml)
+# automationTest_assignment_mercari
 
 ---
 
-## リポジトリ移動のお知らせ
-
-> [!IMPORTANT]
-> このリポジトリは現在、個人所有に移行しました。以前は [Test Planisphere](https://github.com/testplanisphere) によって管理されていましたが、今後は [@takeyaqa](https://github.com/takeyaqa) によって管理されます。
->
-> リポジトリの新しいURLはこちらです：
-> 
-> [https://github.com/takeyaqa/hotel-example-selenium4-java-ja](https://github.com/takeyaqa/hotel-example-selenium4-java-ja)
-> 
-> この変更により、リポジトリの内容や目的に影響はありませんが、クローンしたりフォークしたプロジェクトのリモートURLを更新する必要がある場合があります。
+このプロジェクトはテスト自動化学習のためのサンプルコードを利用した
+シナリオテスト例の実装です。
 
 ---
 
-このプロジェクトはテスト自動化学習のためのサンプルコードです。
+## 提出テストコード
+src/test/java/hotel[https://github.com/skuro1115/automationTest_assignment_mercari/tree/main/src/test/java/hotel]
 
-### テスト対象
+
+hotel test code 
+README.md[https://github.com/skuro1115/automationTest_assignment_mercari/tree/main/src/test/java/hotel/README_Mercari2025_auto.md]
+
+---
+
+## テスト対象
 
 https://hotel-example-site.takeyaqa.dev/ja/
 
-### 概要
+## 🔧 環境情報
 
-#### プログラミング言語
+| カテゴリ              | 使用技術／ツール                                        |
+| ----------------- | ----------------------------------------------- |
+| **プログラミング言語**     | Java                                            |
+| **自動化フレームワーク**    | [Selenium WebDriver](https://www.selenium.dev/) |
+| **テスティングフレームワーク** | [JUnit 5](https://junit.org/junit5/)            |
+| **ビルドツール**        | [Gradle](https://gradle.org/)                   |
 
-* Java
+## ✅ 必須環境
 
-#### 自動化フレームワーク
+| ソフトウェア | バージョン             |
+| ------ | ----------------- |
+| JDK    | 21                |
+| ブラウザ   | Google Chrome 最新版 |
 
-* [Selenium WebDriver](https://www.selenium.dev/)
+---
 
-#### テスティングフレームワーク
-
-* [JUnit 5](https://junit.org/junit5/)
-
-#### ビルドツール
-
-* [Gradle](https://gradle.org/)
-
-### 実行方法
-
-#### 必須環境
-
-* JDK 21
-* Google Chrome
+## 🚀 実行方法
 
 #### テストの実行
+| OS              | 実行コマンド                   |
+| --------------- | ------------------------ |
+| **Windows**     | `gradlew.bat clean test` |
+| **macOS/Linux** | `./gradlew clean test`   |
 
-##### Windows
+
+#### パッケージ化された特定のテストの実行
+
+`hotel` package
+`PremiumUserReservationTest.java` の　`PremiumUserReservationTest`　class
 
 ```
-gradlew.bat clean test
+./gradlew test --tests hotel.PremiumUserReservationTest
 ```
 
-##### macOS/Linux
+```
+./gradlew test --tests hotel.ReservationFlowTest
+```
 
-```
-./gradlew clean test
-```
+
+#### 実行結果の確認
+ローカルレポジトリ内
+build/reports/tests/test/index.html
+
+mac/linux `open`
+windows `start`
